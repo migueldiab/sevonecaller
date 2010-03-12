@@ -22,9 +22,12 @@ public class Main {
     public static void main(String[] args){
       MailClient client = new MailClient();
       Queue sevOneQueue = client.receive();
+
+      
       while(!sevOneQueue.isEmpty()) {
         // use WS to create a PhoneCall with these msgs
-        System.out.print(sevOneQueue.remove() + "\t");
+        TestCall unaLlamada = new TestCall();
+        unaLlamada.callMe((String) sevOneQueue.remove());
         // deberiamos logear los msgs a un archivo por si falla la llamada.
       }      
     }
