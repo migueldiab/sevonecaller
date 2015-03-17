@@ -1,0 +1,1 @@
+Automated system to read from a POP3 mailbox any urgent messages and invoke an Avaya web service that will call into the appropriate person to report it.
